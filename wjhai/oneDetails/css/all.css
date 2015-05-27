@@ -1,0 +1,237 @@
+﻿/********************预加载 BEGIN********************/
+* {
+	margin: 0 auto;
+	padding: 0;
+	outline: none;
+}
+body {
+	font-family: "Microsoft Yahei", "微软雅黑", "Tahoma", "SimSun";
+	font-size: 14px;
+	color: #333;
+}
+a {
+	color: #333;
+	text-decoration: none;
+}
+a:hover {
+	color: #ff7d00;
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+img {
+	border: none;
+	display: block;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.mb10 {
+	margin-bottom: 10px;
+}
+.mb15 {
+	margin-bottom: 15px;
+}
+.mb20 {
+	margin-bottom: 20px;
+}
+.mr15{
+	margin-right: 15px;
+}
+.mr30{
+	margin-right: 30px;
+}
+.mb2 {
+	margin-bottom: 2px;
+}
+/********************预加载 END********************/
+/********************wjh 侧边栏 begin****************/
+.userImg{
+	height: 50px;
+	width: 50px;
+}
+.navbar-right{
+	margin-right: 20px;
+}
+/*三条横线样式 begin*/
+.show_btn{
+	position: absolute;
+	top: 20px;
+	left: 10px;
+	display: none;
+	background: none;
+	border: none;
+}
+.show_btn .icon-bar {
+	display: block;
+	width: 25px;
+	height: 2px;
+	border-radius: 1px;
+	background-color: #fdf8f5;
+}
+.show_btn .icon-bar {
+	margin: 4px 4px
+}
+/*三条横线样式 end*/
+/*选择课程文字 beging*/
+.show_tip{
+	position: absolute;
+	top: 18px;
+	left: 60px;
+	font-size: 18px;
+	color: #fff;
+}
+/*选择课程文字 end*/
+/*左侧边栏列表 begin*/
+.left_bar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;	
+	z-index: 9999;
+	background: #497737;
+}
+.left_bar .navbar-nav{
+	position: absolute;
+	top: 50px;
+	left: 30px;
+	right: 0;
+}
+.left_bar ul li{
+	width: 200px;
+	display: block;
+	font-size: 14px;
+	height: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+}
+.left_bar ul li.first{
+	font-size: 18px;
+	margin-top: 20px;
+}
+.left_bar ul li.line{
+	border-bottom: 1px dotted #ccc;
+}
+.left_bar .navbar-nav > li > a{
+	color: #fff;
+} 
+.left_bar .navbar-nav > li > a:hover{
+	color: #eee;
+	background: none;
+}
+.left_bar .navbar-nav > li > a:focus{
+	color: #eee;
+	background: none;
+}
+/*左侧边栏列表 end*/
+/********************wjh 预加载 end******************/
+
+/********************头部固定的导航 begin********************/
+.navbar-default {
+  background-color: #f1f1f1;
+  border-color: #d9d9d9;
+}
+/********************头部固定的导航 begin********************/
+
+.main{
+	background: #f3f4ed;
+}
+/*顶部导航菜单*/
+#mymenu{
+	z-index: 8999;
+}
+
+/*顶部导航菜单*/
+/*******************hxf滚动条侦测 begin********************/
+#container {
+    /*position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;*/
+    z-index: 9999;
+}
+#content {
+    padding-top: 51px;
+}
+/*右侧圆圈 begin*/
+.bs-docs-sidenav {
+	position: fixed;
+	z-index: 1;
+	top: 50%;
+	right: 0px;
+	margin-top: -202px;
+}
+.bs-docs-sidenav > li > a {
+	display: block;
+	margin: 0;
+	padding: 0px;
+	width: 16px;
+	height: 16px;
+	background: none repeat scroll 0% 0% #F0AD4E;
+	margin: 20px;
+	border-radius: 18px;
+	border: 3px solid #666;
+}
+.bs-docs-sidenav > .active > a,
+.bs-docs-sidenav > li > a:hover {
+	position: relative;
+	z-index: 2;
+	font-size: 25px;
+	cursor: pointer;
+	background: none repeat scroll 0% 0% transparent !important;
+	border: 3px solid red;
+}
+/*右侧圆圈 begin*/
+
+/*右侧圆圈对应的左侧大板块 begin*/
+.slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+#slide1, #slide4, #slide7, #slide10{
+	height: 500px;
+	background: #6bc5b9;
+}
+#slide2, #slide5, #slide8{
+	height: 800px;
+	background: #6bc5b9;
+}
+#slide3, #slide6, #slide9 {
+	height: 500px;
+	background: #6bc5b9;
+}
+/*右侧圆圈对应的左侧大板块 end*/
+/*******************hxf滚动条侦测 end**********************/
+/********************wjh 导航媒体查询 Begin************/
+@media (min-width: 768px) {
+	
+}
+@media (max-width: 767px) {
+	#mymenu{
+		margin-top: 50px;
+	}
+	.navbar-nav li{
+		float:left;
+		width:50%
+	}
+	.navbar-nav li.first{
+		width: 100%;
+		background: #eee;
+	}
+}
+
+/********************wjh 导航媒体查询 end**************/

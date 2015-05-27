@@ -1,0 +1,472 @@
+﻿/********************预加载 BEGIN********************/
+* {
+	margin: 0 auto;
+	padding: 0;
+	outline: none;
+}
+body {
+	font-family: "Microsoft Yahei", "微软雅黑", "Tahoma", "SimSun";
+	font-size: 14px;
+	color: #333;
+	background: #f7f7f7;
+}
+a {
+	color: #333;
+	text-decoration: none;
+}
+a:hover {
+	color: #ff7d00;
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+img {
+	border: none;
+	display: block;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.mb10 {
+	margin-bottom: 10px;
+}
+.mb15 {
+	margin-bottom: 15px;
+}
+.mb20 {
+	margin-bottom: 20px;
+}
+/********************预加载 END********************/
+
+/********************导航重定义 begin********************/
+.bs-docs-nav {
+	margin-bottom: 0px;
+	background: #fff;
+}
+.bs-docs-nav .navbar-brand,
+.bs-docs-nav .navbar-nav>li>a {
+	font-weight: 500;
+	color: #3daaa3;
+}
+.bs-docs-nav .navbar-nav>li>a:hover,
+.bs-docs-nav .navbar-nav>.active>a,
+.bs-docs-nav .navbar-nav>.active>a:hover {
+	color: #3aa099;
+	background-color: #f9f9f9;
+}
+.bs-docs-nav .navbar-toggle .icon-bar {
+	background-color: #563d7c;
+}
+.bs-docs-nav .navbar-header .navbar-toggle {
+	border-color: #fff;
+}
+.bs-docs-nav .navbar-header .navbar-toggle:hover,
+.bs-docs-nav .navbar-header .navbar-toggle:focus {/*右侧下拉的3条横线出现后选中和激活状态边框和背景色*/
+	background-color: #f9f9f9;
+	border-color: #f9f9f9;
+}
+
+.dropdown-menu{
+	min-width:100px;
+}
+.arrow {	
+	font-size: 0;
+	border-color: #b9b9b9 transparent transparent;
+	border-style: solid dashed dashed;
+	border-width: 5px 5px 0;
+	transform:rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	transition: all 0.25s ease 0s;
+}
+.arrowHover {
+	transform:rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	transition: all 0.25s ease 0s;	
+}
+@media (min-width: 992px) {
+	.navbar-fixed-top{/*导航不固定在顶部*/
+		position: static;
+	}
+	.navbar-our .caret,
+	.navbar-our .dropdown-menu{/*顶部导航不出现二级下拉菜单*/
+		display: none;
+	}
+	.dropdown-menu{
+		text-align: center;
+	}
+	.dropdown-menu > li > a{
+		color: #666;
+	}
+}
+/********************导航重定义 begin********************/
+
+/********************banner begin********************/
+.bs-docs-header  {
+	margin: 51px 0;
+	padding: 20px 15px;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+	background-color: #4bccc3;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#46bfb7), to(#4bccc3));
+	background-image: -webkit-linear-gradient(top, #46bfb7 0, #4bccc3 100%);
+	background-image: -o-linear-gradient(top, #46bfb7 0, #4bccc3 100%);
+	background-image: linear-gradient(to bottom, #46bfb7 0, #4bccc3 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#46bfb7', endColorstr='#4bccc3', GradientType=0);
+	background-repeat: repeat-x;
+}
+@media (min-width: 992px) {
+	.bs-docs-header  {
+		margin: 0;
+	}
+}
+.yangLogo{
+	position: relative;
+	top: -4px;
+	display: inline-block;
+	height: 60px;
+}
+.yangLogoP{
+	font-size: 24px;
+}
+/********************banner end********************/
+
+/********************右侧监测导航 begin********************/
+@media (min-width: 992px) {
+	.bs-docs-sidebar .nav>.active>ul {
+		display: block
+	}
+	.bs-docs-sidebar.affix,
+	.bs-docs-sidebar.affix-bottom {
+		width: 213px
+	}
+	.bs-docs-sidebar.affix {
+		position: fixed;
+		top:60px
+	}
+	.bs-docs-sidebar.affix-bottom {
+		position: absolute
+	}
+	.bs-docs-sidebar.affix-bottom .bs-docs-sidenav,
+	.bs-docs-sidebar.affix .bs-docs-sidenav {
+		margin-top: 0;
+		margin-bottom: 0
+	}
+}
+.bs-docs-sidebar {
+	padding-left: 20px
+}
+.bs-docs-sidenav {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.bs-docs-sidebar .nav>li>a {
+	display: block;
+	padding: 4px 20px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #999;
+}
+.bs-docs-sidebar .nav>li>a:hover,
+.bs-docs-sidebar .nav>li>a:focus {
+	padding-left: 19px;
+	color: #46bfb6;
+	text-decoration: none;
+	background-color: transparent;
+	border-left: 1px solid #46bfb6
+}
+.bs-docs-sidebar .nav>.active>a,
+.bs-docs-sidebar .nav>.active:hover>a,
+.bs-docs-sidebar .nav>.active:focus>a {
+	padding-left: 18px;
+	font-weight: 700;
+	color: #46bfb6;
+	background-color: transparent;
+	border-left: 2px solid #46bfb6;
+}
+.bs-docs-sidebar .nav .nav {
+	display: none;
+	padding-bottom: 10px;
+}
+.bs-docs-sidebar .nav .nav>li>a {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 30px;
+	font-size: 12px;
+	font-weight: 400;
+}
+.bs-docs-sidebar .nav .nav>li>a:hover,
+.bs-docs-sidebar .nav .nav>li>a:focus {
+	padding-left: 29px;
+}
+.bs-docs-sidebar .nav .nav>.active>a,
+.bs-docs-sidebar .nav .nav>.active:hover>a,
+.bs-docs-sidebar .nav .nav>.active:focus>a {
+	padding-left: 28px;
+	font-weight: 500;
+}
+/*返回顶部 begin*/
+.back-to-top {
+	display: none;
+	padding: 4px 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #999
+}
+.back-to-top:hover{
+	color: #46bfb6;
+	text-decoration: none
+}
+@media (min-width: 768px) {
+	.back-to-top{
+		display: block
+	}
+}
+/*返回顶部 end*/
+/********************右侧监测导航 begin********************/
+/****************左侧内容区域定义 begin*********************/
+code{
+	display: block;
+	background: none;
+}
+code span{
+	font-family: "微软雅黑";
+	line-height: 25px;
+	font-size: 14px;
+	color: #46bfb7;
+	display: inline-block;
+	background: #ddf1ef;
+	word-break: break-all;
+	word-wrap: break-word;
+	border-radius: 5px;
+	padding: 2px 12px;
+}
+.bs-docs-header h1,.bs-docs-header p{
+	text-align: left;
+}
+.bs-docs-section h1{
+	color: #3daaa3;
+	padding-bottom: 15px;
+	border-bottom: 2px dashed #dfdfdf;
+	font-size: 36px;
+}
+.bs-docs-section h2{
+	padding-top: 10px;
+	font-size: 24px;
+	color: #333;
+}
+.bs-docs-section h3{
+	font-size: 20px;
+	color: #333;
+}
+.bs-docs-section h4{
+	font-size: 18px;
+	color: #333;
+	text-align: center;
+}
+.bs-docs-section p{
+	position: relative;
+	padding-left: 20px;
+	font-size: 16px;
+	line-height: 28px;
+	color: #333333;
+	word-break: break-all;
+	word-wrap: break-word;
+	margin: 0;
+}
+.bs-docs-section li{
+	font-size: 16px;
+	line-height: 40px;
+}
+.bs-docs-section li.docs{
+	border-bottom: 1px solid #dcdcdc;
+	padding: 20px 0;
+}
+.bs-docs-section li.docs p{
+	cursor: pointer;
+}
+.bs-docs-section li.docs:last-child{
+	border-bottom: none;
+}
+.moreMb{
+	text-align: right;
+	font-size: 16px;
+	color: #333333;
+}
+.moreMb span{
+	color: #d2d2d2;
+	margin: 0 0 0 7px;
+}
+
+.orange_box{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	padding-right: 15px;
+	border-left: 4px solid #FAA701;
+	background: #fff;
+	border-radius: 3px;
+}
+.orange_box a{
+	color: #faa701;
+}
+.blue_box{
+	padding: 20px;
+	border-left: 4px solid #38b7ea;
+	background: #fff;
+	border-radius: 3px;
+}
+.blue_box a{
+	color: #38b7ea;
+}
+.imgBtn{
+	display: block;
+	position: absolute;
+	top: 7px;
+	left: 0;
+	width: 14px;
+	height: 14px;
+	color: #d2d2d2;
+	cursor: pointer;
+}
+.togglebox {
+	position: relative;
+	top: 30px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background: none repeat scroll 0% 0% #ccecea;
+    overflow: visible !important;
+    text-align: center;
+    font-size: 16px;
+    color: #666/*3DAAA3*/;
+    line-height: 30px;
+}
+.togglebox:after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent #ccecea;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    display: block;
+    width: 0px;
+}
+.togglebox img{
+	display: block;
+	max-width: 600px;
+	margin-bottom: 10px;
+}
+.imgTip{
+	text-align: center;
+}
+.model_box{
+	border-bottom: 1px solid #dcdcdc;
+	padding: 10px 0;
+	margin-bottom: 10px;
+}
+/***************修改模板鼠标悬浮边框颜色 begin*************/
+.model_box > div{
+	margin-bottom: 10px;
+}
+.thumbnail{
+	margin-bottom: 0;
+}
+a.thumbnail:hover,a.thumbnail:focus,a.thumbnail.active {
+  border-color: #3daaa3;
+}
+/***************修改模板鼠标悬浮边框颜色 end***************/
+@media (max-width: 768px) {
+	/*小羊图标在768内缩放到55像素*/
+	.yangLogo{
+		height: 35px;
+	}
+	.togglebox img{
+		width: 90%;
+	}
+	code{
+		font-size: 12px;
+	}
+}
+/****************左侧内容区域定义 end***********************/
+/********************main begin********************/
+.msg{
+	padding-top: 50px;
+	font-size: 22px;
+	color: #f98700;
+}
+.msg span{
+	font-size: 20px;
+	color: #d2d2d2;
+	margin: 0 4px;
+}
+/********************main begin********************/
+.rimg{ /* 1st set of icons. Rotate them 360deg onmouseover and out */
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+/*************** 页脚  begin  *******************/
+.bs-docs-footer{
+	border-top: 1px solid #DFDFDF;
+	margin: 0 auto;
+	margin-top: 100px;
+	padding:30px 0;
+	font-size:12px;	
+	text-align:center;
+}
+.footerUl {
+	max-width:425px;
+	min-height:26px;
+	margin: 0 auto;
+}
+.footerUl li {
+	float: left;
+	border-right: 1px solid #fff;
+	height:14px;
+	width:70px;
+	overflow:hidden;
+	text-align:center;
+	line-height:14px;
+}
+.footerUl li.nobd {
+	border:none;
+}
+.footerUl li a{
+	color: #333;
+	padding-bottom:4px;
+	display:inline-block;
+}
+.footerUl li a:hover{
+	color: #333;	
+}
+.bs-docs-footer span {
+	display:block;
+	line-height:30px;
+	min-height:30px;
+	vertical-align:middle;
+	color: #333;
+}
+/*************** 页脚  end  *******************/
